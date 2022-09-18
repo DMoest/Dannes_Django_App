@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+<style>
+    label, input {
+        display: block;
+    }
+
+    span.helptext {
+        display: none;
+    }
+</style>
+
+{% block content %}
+
+    <h1>User Login</h1>
+
+    <form method="post">
+        {% csrf_token %}
+
+        {# Render django form #}
+        {{ form.as_p }}
+
+        <input type="submit" value="Login"/>
+    </form>
+
+    <a href="{% url 'dashboard' %}">Back to dashboard</a>
+    <a href="{% url 'social:begin' 'github' %}">Login with GitHub</a>
+    <a href="{% url 'password_reset' %}">Reset password</a>
+    <a href="{% url 'register' %}">Register</a>
+
+{% endblock %}
