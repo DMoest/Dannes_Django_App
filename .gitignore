@@ -132,7 +132,7 @@ dmypy.json
 *.pyc
 __pycache__
 *__pycache__/
-config/__pycache__/**
+1/__pycache__/**
 # Explicit ignore of settings cache file #
 /config/__pycache__/settings.cpython-39.pyc
 */config/__pycache__/settings.cpython-39.pyc
