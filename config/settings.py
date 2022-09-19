@@ -43,8 +43,8 @@ INSTALLED_APPS = [
 
     # Apps
     'projects',
-    # 'users',
-    # 'social_django',
+    'users',
+    'social_django',
 ]
 
 MIDDLEWARE = [
