@@ -6,10 +6,22 @@
 
 <h1>Blog Listing</h1>
 
+{% if messages %}
+<ul class="messages">
+
+    {% for message in messages %}
+    <li {% if message.tags %}
+        class="{{ message.tags}}" {% endif %}>
+        {{ message }}</li>
+    {% endfor %}
+
+</ul>
+{% endif %}
+
 <ul>
     {% for blog_post in blogs %}
         <li>
-            <a href="{% url 'blog:detail' blog_post.id %}">{{ blog_post.title }}</a>
+            <a href="{% url 'blog:blog_detail' blog_post.id %}">{{ blog_post.title }}</a>
         </li>
     {% endfor %}
 </ul>
