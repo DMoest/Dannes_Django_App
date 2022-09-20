@@ -32,7 +32,6 @@ ALLOWED_HOSTS = []
 
 
 # Application definition
-
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -109,46 +108,39 @@ DATABASES = {
 # https://docs.djangoproject.com/en/4.1/ref/settings/#auth-password-validators
 
 AUTH_PASSWORD_VALIDATORS = [
-    # {
-    #     'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
-    # },
-    # {
-    #     'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',
-    # },
-    # {
-    #     'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',
-    # },
-    # {
-    #     'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
-    # },
+    {
+        'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
+    },
+    {
+        'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',
+    },
+    {
+        'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',
+    },
+    {
+        'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
+    },
 ]
 
 
 # Internationalization
 # https://docs.djangoproject.com/en/4.1/topics/i18n/
-
 LANGUAGE_CODE = 'en-us'
-
 TIME_ZONE = 'UTC'
-
 USE_I18N = True
-
 USE_TZ = True
-
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
-
 STATIC_URL = 'static/'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
-
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # Login redirects
-LOGIN_REDIRECT_URL = str(os.getenv('LOGIN_REDIRECT_URL'))
-LOGOUT_REDIRECT_URL = str(os.getenv('LOGOUT_REDIRECT_URL'))
+LOGIN_REDIRECT_URL='dashboard'
+LOGOUT_REDIRECT_URL='dashboard'
 
 # For dev print a "email" message to the console/terminal
 # EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
@@ -160,14 +152,15 @@ EMAIL_HOST_USER = str(os.getenv('EMAIL_HOST_USER'))
 EMAIL_HOST_PASSWORD = str(os.getenv('EMAIL_HOST_PASSWORD'))
 EMAIL_USE_TLS = str(os.getenv('EMAIL_USE_TLS'))
 
+# Social Auth with GitHub key & secret
 SOCIAL_AUTH_GITHUB_KEY = str(os.getenv('GITHUB_CLIENT_ID'))
 SOCIAL_AUTH_GITHUB_SECRET = str(os.getenv('GITHUB_CLIENT_SECRET'))
 
-# Authentication backends
+# Social & Standard Authentication Backends
 AUTHENTICATION_BACKENDS = [
     # Standard authentication.
     'django.contrib.auth.backends.ModelBackend',
 
-    # Social Authentication with GitHub.
+    # Social authentication with GitHub.
     'social_core.backends.github.GithubOAuth2',
 ]
