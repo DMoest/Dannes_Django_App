@@ -23,9 +23,15 @@
         <input type="submit" value="Login"/>
     </form>
 
-    <a href="{% url 'dashboard' %}">Back to dashboard</a>
-    <a href="{% url 'social:begin' 'github' %}">Login with GitHub</a>
-    <a href="{% url 'password_reset' %}">Reset password</a>
-    <a href="{% url 'register' %}">Register</a>
+    <div class="d-flex flex-column justify-content gap-2 mb-6">
+        <a href="{% url 'dashboard' %}"
+            class="btn btn-primary max-width-4">Back to dashboard</a>
+        <a href="{% url 'social:begin' 'github' %}"
+           class="btn btn-primary max-width-4">Login with GitHub</a>
+        <a href="{% url 'password_reset' %}"
+           class="btn btn-primary max-width-4">Reset password</a>
+        <a href="{% url 'register' %}"
+           class="btn btn-primary max-width-4">Register</a>
+    </div>
 
 {% endblock %}
