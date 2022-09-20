@@ -1,0 +1,13 @@
+{% load static %}
+
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1>{{blog_post.title}}</h1>
+
+<hr/>
+
+<a href="{% url 'blog:listing' %}">All Blogs</a>
+
+{% endblock %}

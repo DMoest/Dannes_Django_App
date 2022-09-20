@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+<h1>Blog Listing</h1>
+
+<ul>
+    {% for blog_post in blogs %}
+        <li>
+            <a href="{% url 'blog:detail' blog_post.id %}">{{ blog_post.title }}</a>
+        </li>
+    {% endfor %}
+</ul>
+
+{% endblock %}
