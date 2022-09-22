@@ -30,6 +30,7 @@ DEBUG = str(os.getenv('DJANGO_DEBUG'))
 
 ALLOWED_HOSTS = []
 
+TAILWIND_APP_NAME = 'theme'
 
 # Application definition
 INSTALLED_APPS = [
@@ -40,11 +41,16 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
-    # Apps
+    # My Apps
     'blog',
     'projects',
     'users',
+
+    # Third party apps
     'social_django',
+    'tailwind',
+    'theme',
+    'django_browser_reload'
 ]
 
 MIDDLEWARE = [
@@ -55,6 +61,8 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+
+    "django_browser_reload.middleware.BrowserReloadMiddleware",
 ]
 
 ROOT_URLCONF = 'config.urls'
@@ -62,7 +70,9 @@ ROOT_URLCONF = 'config.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'templates')],
+        'DIRS': [
+            BASE_DIR / 'templates'
+        ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -95,7 +105,7 @@ DATABASES = {
         'HOST': str(os.getenv('DB_HOST')),
         'PORT': str(os.getenv('DB_PORT')),
         'OPTIONS': {
-            'read_default_file': '~/../../etc/mysql/my.cnf',
+            # 'read_default_file': '~/../../etc/mysql/my.cnf',
         },
     },
     'sqlite3': {
@@ -131,13 +141,19 @@ TIME_ZONE = 'UTC'
 USE_I18N = True
 USE_TZ = True
 
+INTERNAL_IPS = [
+    "127.0.0.1",
+]
+
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'blog/static/'),
     os.path.join(BASE_DIR, 'projects/static/'),
     os.path.join(BASE_DIR, 'users/static/'),
+    os.path.join(BASE_DIR, 'theme/static_src/src/'),
 ]
+
 STATIC_URL = 'static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 

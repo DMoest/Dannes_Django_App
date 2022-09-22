@@ -300,3 +300,6 @@ fabric.properties
 
 # Sonarlint plugin
 .idea/sonarlint
+
+# Django-TailwindCSS stuff
+theme/static_src/node_modules/
