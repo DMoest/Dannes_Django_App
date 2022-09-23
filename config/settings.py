@@ -30,7 +30,10 @@ DEBUG = str(os.getenv('DJANGO_DEBUG'))
 
 ALLOWED_HOSTS = []
 
+# TailwindCSS required
 TAILWIND_APP_NAME = 'theme'
+TAILWIND_CSS_PATH = 'css/dist/styles.css'
+NPM_BIN_PATH = '/usr/local/bin/npm'
 
 # Application definition
 INSTALLED_APPS = [
