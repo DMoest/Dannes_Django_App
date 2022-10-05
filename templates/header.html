@@ -1,25 +1,67 @@
 {% load static %}
 
 <header>
-    <nav class="navbar navbar-expand-lg bg-light">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#">Portfolio</a>
+<!--    <nav class="relative w-full flex flex-wrap items-center justify-between py-3 bg-gray-900 text-gray-200 shadow-lg navbar navbar-expand-lg navbar-light">-->
+<!--        <div class="container-fluid w-full flex flex-wrap items-center justify-between px-6">-->
+<!--            <a class="navbar-brand" href="#">Portfolio</a>-->
 
-            <button class="navbar-toggler"
-                    type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarNavAltMarkup"
-                    aria-controls="navbarNavAltMarkup"
-                    aria-expanded="false"
-                    aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+<!--&lt;!&ndash;            <button&ndash;&gt;-->
+<!--&lt;!&ndash;                    class="navbar-toggler text-gray-200 border-0 hover:shadow-none hover:no-underline py-2 px-2.5 bg-transparent focus:outline-none focus:ring-0 focus:shadow-none focus:no-underline"&ndash;&gt;-->
+<!--&lt;!&ndash;                    type="button"&ndash;&gt;-->
+<!--&lt;!&ndash;                    data-bs-toggle="collapse"&ndash;&gt;-->
+<!--&lt;!&ndash;                    data-bs-target="#navbarSupportedContent1"&ndash;&gt;-->
+<!--&lt;!&ndash;                    aria-controls="navbarSupportedContent"&ndash;&gt;-->
+<!--&lt;!&ndash;                    aria-expanded="false"&ndash;&gt;-->
+<!--&lt;!&ndash;                    aria-label="Toggle navigation"&ndash;&gt;-->
+<!--&lt;!&ndash;            >&ndash;&gt;-->
+<!--&lt;!&ndash;                <svg&ndash;&gt;-->
+<!--&lt;!&ndash;                        aria-hidden="true"&ndash;&gt;-->
+<!--&lt;!&ndash;                        focusable="false"&ndash;&gt;-->
+<!--&lt;!&ndash;                        data-prefix="fas"&ndash;&gt;-->
+<!--&lt;!&ndash;                        data-icon="bars"&ndash;&gt;-->
+<!--&lt;!&ndash;                        class="w-6"&ndash;&gt;-->
+<!--&lt;!&ndash;                        role="img"&ndash;&gt;-->
+<!--&lt;!&ndash;                        xmlns="http://www.w3.org/2000/svg"&ndash;&gt;-->
+<!--&lt;!&ndash;                        viewBox="0 0 448 512"&ndash;&gt;-->
+<!--&lt;!&ndash;                >&ndash;&gt;-->
+<!--&lt;!&ndash;                    <path&ndash;&gt;-->
+<!--&lt;!&ndash;                            fill="currentColor"&ndash;&gt;-->
+<!--&lt;!&ndash;                            d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z"&ndash;&gt;-->
+<!--&lt;!&ndash;                    ></path>&ndash;&gt;-->
+<!--&lt;!&ndash;                </svg>&ndash;&gt;-->
+<!--&lt;!&ndash;            </button>&ndash;&gt;-->
 
-            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                <div class="navbar-nav">
-                    <a class="nav-link" href="{% url 'projects:all_projects' %}">Projects</a>
-                    <a class="nav-link" href="{% url 'dashboard' %}">Users</a>
-                    <a class="nav-link" href="{% url 'blog:listing' %}">Blog</a>
-                </div>
+
+<!--            <div class="collapse navbar-collapse flex-grow items-center"-->
+<!--                 id="navbarNavAltMarkup">-->
+<!--                <a class="nav-link text-white" href="{% url 'projects:all_projects' %}">Projects</a>-->
+<!--                <a class="nav-link text-white" href="{% url 'dashboard' %}">Users</a>-->
+<!--                <a class="nav-link text-white" href="{% url 'blog:listing' %}">Blog</a>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </nav>-->
+
+
+
+    <nav class="relative w-full flex flex-wrap items-center justify-between py-3 bg-gray-900 text-gray-200 shadow-lg navbar navbar-expand-lg navbar-light">
+        <div class="container-fluid w-full flex flex-wrap items-center justify-between px-6">
+            <div class="collapse navbar-collapse flex-grow items-center" id="navbarSupportedContent1">
+                <a class="text-xl text-white pr-2 font-semibold" href="#">Portfolio</a>
+
+                <!-- Left links -->
+                <ul class="navbar-nav flex flex-row pl-0 list-style-none mr-auto">
+                    <li class="nav-item p-2">
+                        <a class="nav-link text-white" href="{% url 'dashboard' %}">Users</a>
+                    </li>
+                    <li class="nav-item p-2">
+                        <a class="nav-link text-white opacity-60 hover:opacity-80 focus:opacity-80 p-0"
+                           href="{% url 'projects:all_projects' %}">Projects</a>
+                    </li>
+                    <li class="nav-item p-2">
+                        <a class="nav-link text-white opacity-60 hover:opacity-80 focus:opacity-80 p-0"
+                           href="{% url 'blog:listing' %}">Blog</a>
+                    </li>
+                </ul>
             </div>
         </div>
     </nav>
