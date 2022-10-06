@@ -18,7 +18,6 @@ load_dotenv()  # loads the configs from .env
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
 
@@ -53,7 +52,8 @@ INSTALLED_APPS = [
     'social_django',
     'tailwind',
     'theme',
-    'django_browser_reload'
+    'django_browser_reload',
+    'active_link',
 ]
 
 MIDDLEWARE = [
@@ -94,7 +94,6 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'config.wsgi.application'
 
-
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
@@ -117,7 +116,6 @@ DATABASES = {
     }
 }
 
-
 # Password validation
 # https://docs.djangoproject.com/en/4.1/ref/settings/#auth-password-validators
 
@@ -135,7 +133,6 @@ AUTH_PASSWORD_VALIDATORS = [
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
 ]
-
 
 # Internationalization
 # https://docs.djangoproject.com/en/4.1/topics/i18n/
@@ -165,8 +162,8 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # Login redirects
-LOGIN_REDIRECT_URL='dashboard'
-LOGOUT_REDIRECT_URL='dashboard'
+LOGIN_REDIRECT_URL = 'dashboard'
+LOGOUT_REDIRECT_URL = 'dashboard'
 
 # For dev print a "email" message to the console/terminal
 # EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
