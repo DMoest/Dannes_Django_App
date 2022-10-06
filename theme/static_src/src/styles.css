@@ -1,3 +1,80 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+    :root {
+        /* Theme Colors */
+        --color-primary-100: #FFCF76;
+        --color-primary-200: #FFC14E;
+        --color-primary-300: #F2A922;
+        --color-primary-400: #C78409;
+        --color-primary-500: #9E6600;
+
+        --color-secondary-100: #FFBD6B;
+        --color-secondary-200: #ED9F3F;
+        --color-secondary-300: #D98014;
+        --color-secondary-400: #AE6306;
+        --color-secondary-500: #874A00;
+
+        --color-tertiary-100: #FF9D78;
+        --color-tertiary-200: #E8754A;
+        --color-tertiary-300: #D9501E;
+        --color-tertiary-400: #AC390E;
+        --color-tertiary-500: #852400;
+
+        --color-quaternary-100: #BA5D3A;
+        --color-quaternary-200: #983C1A;
+        --color-quaternary-300: #732002;
+        --color-quaternary-400: #4D1500;
+        --color-quaternary-500: #290B00;
+
+        --color-quinary-100: #667577;
+        --color-quinary-200: #4B595C;
+        --color-quinary-300: #323E40;
+        --color-quinary-400: #192426;
+        --color-quinary-500: #102225;
+
+        /* Text Colors */
+        --color-text-base: #fff;
+        --color-text-muted: #c7d2fe;
+        --color-text-inverted: #1a202c;
+        --color-fill-base: #1a202c;
+        --color-button-accent: #fff;
+        --color-button-accent-hover: #fff;
+        --color-button-muted: #fff;
+
+        /* Response Colors */
+        --color-info: #4299e1;
+        --color-success: #48bb78;
+        --color-caution: #f6e05e;
+        --color-warning: #f56565;
+        --color-danger: #e53e3e;
+
+        /* Social Media Colors */
+        --color-bitbucket: #205081;
+        --color-discord: #7289da;
+        --color-facebook: #3b5998;
+        --color-flickr: #ff0084;
+        --color-github: #333;
+        --color-gitlab: #fc6d26;
+        --color-instagram: #e1306c;
+        --color-linkedin: #0077b5;
+        --color-pinterest: #bd081c;
+        --color-reddit: #ff4500;
+        --color-skype: #00aff0;
+        --color-spotify: #1db954;
+        --color-slack: #4a154b;
+        --color-snapchat: #fffc00;
+        --color-soundcloud: #ff5500;
+        --color-stackoverflow: #f48024;
+        --color-telegram: #0088cc;
+        --color-twitch: #6441a5;
+        --color-twitter: #1da1f2;
+        --color-tumblr: #35465c;
+        --color-vimeo: #1ab7ea;
+        --color-whatsapp: #25d366;
+        --color-yahoo: #400191;
+        --color-youtube: #ff0000;
+    }
+}
