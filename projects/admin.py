@@ -7,5 +7,5 @@ from projects.models import Project
 @admin.register(Project)
 class ProjectAdmin(admin.ModelAdmin):
     list_display = ('id', 'title', 'short_description', 'description', 'technology', 'link', 'colaborators')
-    list_filter = ('technology', 'image')
+    list_filter = ('technology', 'colaborators')
     search_fields = ('id', 'title', 'technology', 'colaborators')

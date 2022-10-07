@@ -9,6 +9,7 @@ curtsies==0.4.0
 cwcwidth==0.1.7
 defusedxml==0.7.1
 Django==4.1.1
+django-active-link==0.1.8
 django-browser-reload==1.6.0
 django-tailwind==3.4.0
 greenlet==1.1.3

@@ -3,7 +3,7 @@
 """
 Django ORM models for projects app.
 """
-from django.db.models import (CharField, Model, TextField)
+from django.db.models import (CharField, DateTimeField, Model, TextField)
 
 
 # Create your models here.
@@ -15,6 +15,7 @@ class Project(Model):
     link = CharField(max_length=255, blank=True, null=False, default='')
     colaborators = CharField(max_length=255, blank=True, null=False, default='')
     image = CharField(max_length=255, blank=True, null=False)
+    created_at = DateTimeField(auto_now_add=True)
 
     def __str__(self):
         return f"{self.title}"
